@@ -46,7 +46,7 @@ nav {
   border-radius: 12px;
   text-align: center;
   font-weight: bold;
-  padding: .85em;
+  padding: .5em;
   margin-bottom: 1.5em;
   box-shadow: 0 4px 16px rgba(15, 36, 57, 0.06);
   position: sticky;
@@ -121,6 +121,34 @@ footer {
   position: relative;
 }
 
+.column-left {
+  float: left;
+  width: 48%;
+}
+
+.column-right {
+  float: right;
+  width: 48%;
+}
+
+.clear {
+  clear: both;
+}
+
+.badge {
+  position: absolute;
+  top: 1.25em;
+  right: 1.5em;
+  background-color: #4494DA;
+  color: #FFFFFF;
+  font-size: .7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: .4em .9em;
+  border-radius: 999px;
+}
+
 figure {
   background-color: #FFFFFF;
   border: 1px solid #DCE6F5;
@@ -159,30 +187,105 @@ figcaption {
   border-style: none;
 }
 
-.badge {
-  position: absolute;
-  top: 1.25em;
-  right: 1.5em;
-  background-color: #4494DA;
+/* Tables */
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 1em;
+}
+
+th,
+td {
+padding: .75em 1em;
+text-align: left;
+border-bottom: 1px solid #DCE6F5;
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  font-size: 0.85em;
+  color: #5A6878;
+  padding-bottom: 0.75em;
+}
+
+thead th {
+  background-color: #0F2439;
   color: #FFFFFF;
-  font-size: .7em;
+}
+
+tbody tr:nth-of-type(even) {
+background-color: #F3F7FD;
+}
+
+/* Forms */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.field label, legend {
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  padding: .4em .9em;
+  color: #0F2439;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+font: inherit;
+padding: .7em .9em;
+border: 1px solid #B8C7DD;
+border-radius: 8px;
+background-color: #FFFFFF;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid #4494D4;
+  outline-offset: 2px;
+}
+
+fieldset {
+  border: 1px solid #DCE6F5;
+  border-radius: 8px;
+  padding: 1em 1.25em;
+  margin: 0;
+}
+
+fieldset label {
+  margin-right: 1.5em;
+}
+
+button {
+  font: inherit;
+  font-weight: bold;
+  background-color: #0F2439;
+  color: #FFFFFF;
+  padding: 0.8em 1.75em;
+  border: none;
   border-radius: 999px;
+  cursor: pointer;
+  align-self: flex-start;
 }
 
-.column-left {
-  float: left;
-  width: 48%;
+button:hover {
+  background-color: #4494D4;
 }
 
-.column-right {
-  float: right;
-  width: 48%;
-}
-
-.clear {
-  clear: both;
+button:focus {
+  outline: 3px solid #4494D4;
+  outline-offset: 2px;
 }
